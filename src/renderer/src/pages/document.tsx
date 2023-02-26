@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { Editor, OnContentUpdatedParams } from '../components/Editor'
-import { ToC } from '../components/ToC'
+// import { ToC } from '../components/ToC'
 import { Document as IPCDocument } from '@shared/types/ipc'
 
 export function Document() {
@@ -51,7 +51,7 @@ export function Document() {
 
   return (
     <main className="flex-1 flex py-12 px-10 gap-8">
-      <aside className="hidden lg:block sticky top-0">
+      {/* <aside className="hidden lg:block sticky top-0">
         <span className="text-rotion-300 font-semibold uppercase text-xs">
           Table of Contents
         </span>
@@ -63,7 +63,7 @@ export function Document() {
             <ToC.Link>Autenticação</ToC.Link>
           </ToC.Section>
         </ToC.Root>
-      </aside>
+      </aside> */}
 
       <section className="flex-1 flex flex-col items-center">
         {!isFetching && data && (

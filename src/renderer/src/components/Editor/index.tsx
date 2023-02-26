@@ -4,6 +4,9 @@ import Highlight from '@tiptap/extension-highlight'
 import Typography from '@tiptap/extension-typography'
 import Placeholder from '@tiptap/extension-placeholder'
 import Document from '@tiptap/extension-document'
+import TaskItem from '@tiptap/extension-task-item'
+import TaskList from '@tiptap/extension-task-list'
+import './styles.scss'
 
 export interface OnContentUpdatedParams {
   title: string
@@ -31,6 +34,10 @@ export function Editor({ content, onContentUpdated }: EditorProps) {
         emptyEditorClass:
           'before:content-[attr(data-placeholder)] before:text-gray-500 before:h-0 before:float-left before:pointer-events-none',
       }),
+      TaskItem.configure({
+        nested: true,
+      }),
+      TaskList.configure(),
     ],
     onUpdate: ({ editor }) => {
       const contentRegex = /(<h1>(?<title>.+)<\/h1>(?<content>.+)?)/
