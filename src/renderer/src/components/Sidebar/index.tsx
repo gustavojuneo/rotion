@@ -4,7 +4,6 @@ import * as Collapsible from '@radix-ui/react-collapsible'
 import { useQuery } from '@tanstack/react-query'
 import * as Navigation from './Navigation'
 import { CreatePage } from './CreatePage'
-import { Profile } from './Profile'
 import { Search } from './Search'
 
 export function Sidebar() {
@@ -44,7 +43,6 @@ export function Sidebar() {
           },
         )}
       >
-        <Profile />
         <Search />
 
         <Navigation.Root>

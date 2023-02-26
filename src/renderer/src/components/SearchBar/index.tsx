@@ -18,6 +18,7 @@ export function SearchBar({ open, onOpenChange }: SearchBarProps) {
 
   const handleOpenDocument = (id: string) => {
     navigate(`/documents/${id}`)
+    onOpenChange(false)
   }
 
   useEffect(() => {

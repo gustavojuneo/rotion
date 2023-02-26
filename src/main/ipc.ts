@@ -93,7 +93,7 @@ ipcMain.handle(
     const currentPath = path.join(
       homeDir,
       'noted-documents',
-      `${title}-${id}.html`,
+      `${title}-${id}.json`,
     )
 
     const document = {
